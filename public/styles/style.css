@@ -53,6 +53,10 @@
   border: 1px solid #ccc;
   border-radius: 5px;
 }
+.lenguage-batton {
+  background-color: #fff;
+  border: none;
+}
 .lenguage {
   width: 40px;
 }
@@ -63,3 +67,5 @@
   align-items: center;
   font-size: 30px;
 }
+
+/* footer */
