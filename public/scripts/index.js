@@ -13,16 +13,22 @@ document
   .getElementById("searchForm")
   .addEventListener("submit", handleFormSubmit);
 
+
 async function handleFormSubmit(event) {
   event.preventDefault();
-
   try {
-    const formData = new FormData(event.target);
-
+    // const formData = new FormData(event.target);
+    const queryInput = document.getElementById("query");
+    const query = queryInput.value;
     const response = await fetch("/search", {
       method: "POST",
-      body: formData,
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ query }),
     });
+
+    console.log(response);
 
     if (!response.ok) {
       throw new Error("Ошибка при отправке запроса: " + response.status);
