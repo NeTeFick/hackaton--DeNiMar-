@@ -48,8 +48,13 @@
   height: 22px;
 }
 .results-container {
-  margin: 20px;
-  padding: 10px;
+  display: flex;
+  max-width: 1440px;
+  flex-wrap: wrap;
+  gap: 32px;
+  justify-content: center;
+  padding-left: 80px;
+  padding-right: 80px;
   border: 1px solid #ccc;
   border-radius: 5px;
 }
@@ -66,6 +71,30 @@
   justify-content: center;
   align-items: center;
   font-size: 30px;
+}
+
+/* card */
+.card {
+  width: 624px;
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 20px;
+}
+
+.card-image {
+  width: 100%;
+  height: auto;
+}
+
+.card-content {
+  padding: 10px;
+}
+
+.card-title {
+  font-size: 32px;
+  margin-bottom: 5px;
+  display: flex;
+  justify-content: center;
 }
 
 /* footer */
